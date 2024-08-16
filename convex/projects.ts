@@ -75,7 +75,7 @@ export const createProject = mutation({
       fileId: args.fileId,
       type: args.type,
       studentId: hasAccess.student._id,
-      status: "draft",
+      status: "submitted",
       submissionDate: new Date().toISOString(),
       department: args.department,
       supervisorName: args.supervisorName,
