@@ -20,6 +20,7 @@ export async function getStudent(
   if (!student) {
     throw new ConvexError("Expected student to be defined");
   }
+
   return student;
 }
 
@@ -35,7 +36,7 @@ export const createStudent = internalMutation({
       tokenIdentifier: args.tokenIdentifier,
       orgIds: [],
       name: args.name,
-      // email: args.email,
+      email: args.email,
       image: args.image,
       // department: "",
       // graduationYear: null,
@@ -59,6 +60,7 @@ export const updateStudent = internalMutation({
         q.eq("tokenIdentifier", args.tokenIdentifier)
       )
       .first();
+
     if (!student) {
       throw new ConvexError("No student with this token found");
     }
@@ -76,6 +78,7 @@ export const addOrgIdToStudent = internalMutation({
   args: { tokenIdentifier: v.string(), orgId: v.string(), role: roles },
   async handler(ctx, args) {
     const student = await getStudent(ctx, args.tokenIdentifier);
+
     await ctx.db.patch(student._id, {
       orgIds: [...student.orgIds, { orgId: args.orgId, role: args.role }],
     });
@@ -86,7 +89,9 @@ export const updateRoleInOrgForStudent = internalMutation({
   args: { tokenIdentifier: v.string(), orgId: v.string(), role: roles },
   async handler(ctx, args) {
     const student = await getStudent(ctx, args.tokenIdentifier);
+
     const org = student.orgIds.find((org) => org.orgId === args.orgId);
+
     if (!org) {
       throw new ConvexError(
         "Expected an org on the student but was not found when updating"
@@ -103,6 +108,7 @@ export const getStudentProfile = query({
   args: { studentId: v.id("students") },
   async handler(ctx, args) {
     const student = await ctx.db.get(args.studentId);
+
     return {
       name: student?.name,
       email: student?.email,

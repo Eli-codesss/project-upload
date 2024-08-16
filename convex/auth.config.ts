@@ -3,7 +3,7 @@
 export default {
   providers: [
     {
-      domain: "https://quiet-whippet-31.clerk.accounts.dev",
+      domain: "https://evident-chigger-28.clerk.accounts.dev",
       applicationID: "convex",
     },
   ],
