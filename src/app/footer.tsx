@@ -1,4 +1,6 @@
 import Link from "next/link";
+import UmatLogo from "../../public/umat-removebg-preview.webp";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -6,11 +8,15 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
-            <img
-              className="h-10"
-              src="/fyp-logo.png"
-              alt="FYP Upload Platform"
-            />
+            <span className="flex items-center">
+              <Image
+                src={UmatLogo}
+                alt="FYP Upload Platform"
+                width={60}
+                height={60}
+              />
+              <p> UMaT-SRID Project Repository </p>
+            </span>
             <p className=" text-base">
               Streamlining the final year project submission process for
               students and supervisors.
