@@ -5,8 +5,8 @@ import { useUser } from "@clerk/nextjs";
 
 export default function LandingPage() {
   return (
-    <div className="">
-      <div className="relative  px-6 pt-14 lg:px-8">
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="relative px-6 pt-14 lg:px-8">
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
           aria-hidden="true"
@@ -21,15 +21,6 @@ export default function LandingPage() {
         </div>
         <div className="mx-auto max-w-2xl py-8">
           <div className="text-center">
-            <div className="relative w-full h-full">
-              <Image
-                src={Logo}
-                width="200"
-                height="200"
-                alt="FYP Upload Platform logo"
-                className="inline-block mb-8"
-              />
-            </div>
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
               Streamline Your Final Year Project Submissions
             </h1>
