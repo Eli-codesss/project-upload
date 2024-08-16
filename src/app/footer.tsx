@@ -53,7 +53,7 @@ export default function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/project-guidelines" className="text-base ">
+                    <Link href="/guideline" className="text-base ">
                       Project Guidelines
                     </Link>
                   </li>
@@ -65,17 +65,17 @@ export default function Footer() {
                 </h3>
                 <ul className="mt-4 space-y-4">
                   <li>
-                    <Link href="/faq" className="text-base ">
+                    <Link href="#" className="text-base ">
                       FAQ
                     </Link>
                   </li>
                   <li>
-                    <Link href="/help" className="text-base ">
+                    <Link href="#" className="text-base ">
                       Help Center
                     </Link>
                   </li>
                   <li>
-                    <Link href="/contact" className="text-base ">
+                    <Link href="#" className="text-base ">
                       Contact Us
                     </Link>
                   </li>
@@ -89,17 +89,17 @@ export default function Footer() {
                 </h3>
                 <ul className="mt-4 space-y-4">
                   <li>
-                    <Link href="/about" className="text-base ">
+                    <Link href="#" className="text-base ">
                       About
                     </Link>
                   </li>
                   <li>
-                    <Link href="/privacy" className="text-base ">
+                    <Link href="#" className="text-base ">
                       Privacy Policy
                     </Link>
                   </li>
                   <li>
-                    <Link href="/terms" className="text-base ">
+                    <Link href="#" className="text-base ">
                       Terms of Service
                     </Link>
                   </li>
